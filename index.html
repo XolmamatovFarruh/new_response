@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello World Design</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap">
+    <style>
+        /* Sahifa fon rangi va umumiy dizayn */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+            font-family: 'Roboto', Arial, sans-serif;
+            box-sizing: border-box;
+        }
+
+        /* Hello World matn dizayni */
+        .hello-world {
+            font-size: 50px;
+            font-weight: bold;
+            color: #3498db;
+            text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+            animation: pop 2s ease-in-out infinite, fadeIn 1s ease-in;
+            text-align: center;
+        }
+
+        /* Matn animatsiyasi */
+        @keyframes pop {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+        }
+
+        /* Matnning o'tish effektini yaratish */
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        /* Mobil uchun responsive dizayn */
+        @media (max-width: 768px) {
+            .hello-world {
+                font-size: 40px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hello-world {
+                font-size: 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="hello-world">Hello {{name}}</div>
+</body>
+</html>
